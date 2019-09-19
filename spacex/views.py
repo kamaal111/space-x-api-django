@@ -1,11 +1,10 @@
-from django.http import JsonResponse, HttpRequest
-from config import spacex_api_url
+from django.http import JsonResponse
 import requests
 
-# Create your views here.
+from config import spacex_api_url
 
 
-def index(request):
+def allLaunches(request):
     if request.method == 'GET':
         response = requests.get(spacex_api_url + 'launches/')
 
