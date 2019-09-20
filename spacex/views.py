@@ -1,7 +1,6 @@
-from django.http import JsonResponse
-import requests
-
 from config import spacex_api_url
+import requests
+from django.http import JsonResponse
 
 
 def allLaunches(request):
