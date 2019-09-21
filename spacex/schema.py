@@ -11,9 +11,9 @@ class Launch(graphene.ObjectType):
 
 
 class RootQuery(graphene.ObjectType):
-    launches = graphene.List(Launch)
+    all_launches = graphene.List(Launch)
 
-    def resolve_launches(self, info: graphql.ResolveInfo, **kwargs):
+    def resolve_all_launches(self, info: graphql.ResolveInfo, **kwargs):
         response = requests.get(spacex_api_url + 'launches/')
 
         response_as_list = []

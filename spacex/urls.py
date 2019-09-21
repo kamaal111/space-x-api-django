@@ -4,5 +4,5 @@ from . import views
 
 app_name = 'spacex'
 urlpatterns = [
-    path('v1/launches', views.allLaunches, name='allLaunches'),
+    path('', views.hello, name='hello'),
 ]
