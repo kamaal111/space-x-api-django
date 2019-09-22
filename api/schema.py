@@ -1,8 +1,8 @@
 import graphene
-import spacex.schema
+import spacex.query
 
 
-class RootQuery(spacex.schema.RootQuery, graphene.ObjectType):
+class RootQuery(spacex.query.Query, graphene.ObjectType):
     pass
 
 
