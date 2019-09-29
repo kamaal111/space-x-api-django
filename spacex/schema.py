@@ -18,7 +18,7 @@ class Cores(graphene.ObjectType):
     landing_vehicle = graphene.String()
 
 
-class First_Launch(graphene.ObjectType):
+class First_Stage(graphene.ObjectType):
     cores = graphene.List(graphene.NonNull(Cores))
 
 
@@ -54,7 +54,7 @@ class Payload(graphene.ObjectType):
     norad_id = graphene.List(graphene.Int)
 
 
-class Second_Launches(graphene.ObjectType):
+class Second_Stage(graphene.ObjectType):
     block = graphene.Int()
     payload = graphene.List(graphene.NonNull(Payload))
 
@@ -70,8 +70,8 @@ class Rocket(graphene.ObjectType):
     rocket_id = graphene.NonNull(graphene.String)
     rocket_name = graphene.NonNull(graphene.String)
     rocket_type = graphene.NonNull(graphene.String)
-    first_stage = graphene.NonNull(First_Launch)
-    second_stage = graphene.NonNull(Second_Launches)
+    first_stage = graphene.NonNull(First_Stage)
+    second_stage = graphene.NonNull(Second_Stage)
     fairings = graphene.Field(Fairings)
 
 
@@ -122,7 +122,7 @@ class Timeline(graphene.ObjectType):
     payload_deploy_2 = graphene.Int()
 
 
-class Launch(graphene.ObjectType):
+class All_Launches(graphene.ObjectType):
     flight_number = graphene.NonNull(graphene.Int)
     mission_name = graphene.NonNull(graphene.String)
     upcoming = graphene.NonNull(graphene.Boolean)
