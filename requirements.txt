@@ -2,7 +2,7 @@ aniso8601==7.0.0
 autopep8==1.4.4
 certifi==2019.9.11
 chardet==3.0.4
-Django==2.2.8
+Django==2.2.13
 django-graphiql==0.4.4
 get==2019.4.13
 graphene==2.1.8
